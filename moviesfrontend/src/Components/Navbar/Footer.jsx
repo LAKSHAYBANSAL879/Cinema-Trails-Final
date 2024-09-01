@@ -23,7 +23,7 @@ const Footer = () => {
           </div>
 
           {/* Products Column */}
-          <div className="flex flex-col items-end">
+          <div className="flex flex-col items-start">
             <h3 className="dark:text-white font-semibold mb-4 uppercase">Discover by Mood</h3>
             <ul className="space-y-2">
               <li><a href="/" className="hover:text-white">Discover Comedy Movies</a></li>
@@ -32,7 +32,7 @@ const Footer = () => {
           </div>
 
           {/* Company Column */}
-          <div className="flex flex-col items-end">
+          <div className="flex flex-col items-start">
             <h3 className="dark:text-white font-semibold mb-4 uppercase">Company</h3>
             <ul className="space-y-2">
               <li><a href="/" className="hover:text-white">About Us</a></li>

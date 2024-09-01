@@ -86,7 +86,7 @@ function MovieDetails() {
 
     return (
         <>
-            <div className='relative w-full h-[37rem] flex flex-col items-center text-black dark:text-white justify-start transition-all duration-500'>
+            <div className='relative w-full h-[33rem] flex flex-col items-center text-black dark:text-white justify-start transition-all duration-500'>
                 <div className='-z-10 bg-opacity-10 bg-black dark:bg-opacity-100 w-full h-full fixed top-0'>
                     <img src={movieCollage} className='opacity-10 dark:invert-0 invert' alt='' />
                 </div>
@@ -132,7 +132,8 @@ function MovieDetails() {
                                     <FontAwesomeIcon icon={faPlay} />
                                 </motion.div>
                             </a>
-                            <div className="text-center text-black dark:text-white text-sm font-medium mt-2">
+                            <div className="text-center text
+                            -black dark:text-white text-sm font-medium mt-2">
                                 Watch Trailer
                             </div>
                         </div>
@@ -142,29 +143,30 @@ function MovieDetails() {
                     </div>
                 </div>
             </div>
-            <div className='mt-10 px-20'>
-                <div className='col-span-2 flex flex-col'>
-                    <div className="flex dark:bg-black backdrop-blur-sm pb-2 px-6 sticky top-0 py-5 mb-16 mt-4">
-                        {tabs.map((tab, index) => (
-                            <a
-                                key={index}
-                                href={"#" + tab.name.replace(" ", "")}
-                                className={`cursor-pointer py-2 px-4
-                                ${activeTab === tab.name ? 'border-b-4 font-semibold border-blue-500 dark:text-white text-black' : 'dark:text-gray-200 text-gray-800 font-medium'}
-                                dark:hover:text-gray-400 hover:text-gray-900 transition-colors duration-300`}
-                                onClick={() => setActiveTab(tab.name)}
-                            >
-                                {tab.name}
-                            </a>
-                        ))}
-                    </div>
-                    <div className=''>
-                        <section id="Reviews"><Reviews reviews={data.reviews} /></section>
-                        <section id="Cast"><Cast castMembers={data.cast} /></section>
-                        <section id="MoviePosters"><MovieImages images={data.images} /></section>
-                    </div>
-                </div>
-            </div>
+            <div className='mt-6 px-4 md:px-20'>
+        <div className='flex flex-col'>
+          <div className="flex flex-wrap justify-center dark:bg-black backdrop-blur-sm pb-2 px-2 md:px-6 sticky top-0 py-3 md:py-5 mb-8 md:mb-16">
+            {tabs.map((tab, index) => (
+              <a
+                key={index}
+                href={"#" + tab.name.replace(" ", "")}
+                className={`cursor-pointer py-2 px-2 md:px-4 text-sm md:text-base
+                ${activeTab === tab.name ? 'border-b-4 font-semibold border-blue-500 dark:text-white text-black' : 'dark:text-gray-200 text-gray-800 font-medium'}
+                dark:hover:text-gray-400 hover:text-gray-900 transition-colors duration-300`}
+                onClick={() => setActiveTab(tab.name)}
+              >
+                {tab.name}
+              </a>
+            ))}
+          </div>
+          <div className='space-y-8 md:space-y-16'>
+            <section id="Reviews"><Reviews reviews={data.reviews} /></section>
+            <section id="Cast"><Cast castMembers={data.cast} /></section>
+            <section id="MoviePosters"><MovieImages images={data.images} /></section>
+          </div>
+        </div>
+      </div>
+    
         </>
     );
 }
