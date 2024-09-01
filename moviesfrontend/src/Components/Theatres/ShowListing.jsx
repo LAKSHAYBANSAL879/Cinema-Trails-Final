@@ -80,122 +80,118 @@ function ShowListing() {
 
     return (
         <>
-            <div className='relative w-full h-[37rem] mt-5 text-white'>
-                {showAddReview && (
-                    <div className='absolute left-1/2 -top-10 z-30 w-full'>
-                        <AddReview onAddReviewSuccess={handleAddReviewSuccess} setShowAddReview={setShowAddReview} />
-                    </div>
-                )}
-                <div className='-z-10 bg-opacity-10 bg-black dark:bg-opacity-100 w-full h-full fixed top-0'>
-                    <img src={movieCollage} className='dark:opacity-5 opacity-5 dark:invert-0 invert' alt='' />
+             <div className='relative w-full min-h-screen mt-5 text-white'>
+            {showAddReview && (
+                <div className='absolute left-1/2 -top-10 z-30 w-full'>
+                    <AddReview onAddReviewSuccess={handleAddReviewSuccess} setShowAddReview={setShowAddReview} />
                 </div>
-                <div className='flex w-full items-center h-[37rem] justify-evenly'>
-                    <div className='w-2/3 flex items-center justify-around'>
-                        <div>
-                            <DateScroller onDateChange={handleDateChange} />
-                        </div>
-                        <div className='w-5/6'>
-                            <div className='mb-5 flex justify-between'>
-                                <span className='text-3xl font-semibold text-black dark:text-white'>
-                                    {isLoading ? <Skeleton width={200} /> : 'Show Listings'}
-                                </span>
-                                <div className='flex gap-2'>
-                                    <form className="max-w-sm mx-auto">
-                                        <select 
-                                            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                            value={selectedState}
-                                            onChange={(e) => setSelectedState(e.target.value)}
-                                        >
-                                            <option value="">Choose state</option>
-                                            <option value="Haryana">Haryana</option>
-                                            <option value="DELHI">Delhi</option>
-                                            <option value="Uttar pradesh">Uttar Pradesh</option>
-                                            <option value="Rajasthan">Rajasthan</option>
-                                        </select>
-                                    </form>
-                                    <form className="max-w-sm mx-auto">
-                                        <select 
-                                            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                            value={selectedCity}
-                                            onChange={(e) => setSelectedCity(e.target.value)}
-                                        >
-                                            <option value="">Choose city</option>
-                                            <option value="Fariabad">Faridabad</option>
-                                            <option value="Gurgaon">Gurgaon</option>
-                                            <option value="NEW DELHI">New Delhi</option>
-                                            <option value="Noida">Noida</option>
-                                        </select>
-                                    </form>
-                                </div>
-                            </div>
-                            <div className='h-[30rem] overflow-auto'>
-                                {isLoading ? (
-                                    <Skeleton count={5} height={120} />
-                                ) : filteredTheaters.length === 0 ? (
-                                    <p className='text-black dark:text-white'>No theaters found for this movie in the selected location.</p>
-                                ) : (
-                                    filteredTheaters.map((theater, index) => (
-                                        <SingleTheatre 
-                                            key={index} 
-                                            theatre={theater.theatre} 
-                                            showtimes={theater.showtimes} 
-                                            selectedDate={selectedDate}
-                                            onShowtimeClick={handleShowtimeClick}
-                                        />
-                                    ))
-                                )}
+            )}
+            <div className='-z-10 bg-opacity-10 bg-black dark:bg-opacity-100 w-full h-full fixed top-0'>
+                <img src={movieCollage} className='dark:opacity-5 opacity-5 dark:invert-0 invert' alt='' />
+            </div>
+            <div className='flex flex-col lg:flex-row w-full items-start lg:items-center justify-evenly'>
+                <div className='w-full lg:w-2/3 flex flex-col lg:flex-row items-center justify-around'>
+                    <div className='mb-4 lg:mb-0'>
+                        <DateScroller onDateChange={handleDateChange} />
+                    </div>
+                    <div className='w-full lg:w-5/6'>
+                        <div className='mb-5 flex flex-col lg:flex-row justify-between'>
+                            <span className='text-3xl font-semibold text-black dark:text-white mb-4 lg:mb-0'>
+                                {isLoading ? <Skeleton width={200} /> : 'Show Listings'}
+                            </span>
+                            <div className='flex flex-col lg:flex-row gap-2'>
+                                <select 
+                                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 mb-2 lg:mb-0"
+                                    value={selectedState}
+                                    onChange={(e) => setSelectedState(e.target.value)}
+                                >
+                                    <option value="">Choose state</option>
+                                    <option value="Haryana">Haryana</option>
+                                    <option value="DELHI">Delhi</option>
+                                    <option value="Uttar pradesh">Uttar Pradesh</option>
+                                    <option value="Rajasthan">Rajasthan</option>
+                                </select>
+                                <select 
+                                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                    value={selectedCity}
+                                    onChange={(e) => setSelectedCity(e.target.value)}
+                                >
+                                    <option value="">Choose city</option>
+                                    <option value="Fariabad">Faridabad</option>
+                                    <option value="Gurgaon">Gurgaon</option>
+                                    <option value="NEW DELHI">New Delhi</option>
+                                    <option value="Noida">Noida</option>
+                                </select>
                             </div>
                         </div>
-                    </div>
-                    <div className='w-1/4 relative top-0'>
-                        {isLoading ? (
-                            <Skeleton height={400} />
-                        ) : (
-                            movie && (
-                                <div>
-                                    <div ref={dataRef} className="bg-transparent dark:text-white text-black p-6 rounded-lg max-w-2xl relative mb-5">
-                                        <div className='flex gap-2'>
-                                            {movie.genre.map((value, index) => (
-                                                <span key={index} className="bg-gray-800 text-white rounded-xl px-3 py-1 text-sm">{value}</span>
-                                            ))}
-                                        </div>
-                                        <h2 className="text-2xl font-bold my-8">{movie.title}</h2>
-                                        <p className="text-gray-400 mt-4">
-                                            {`${Math.floor(movie.duration / 60)}h ${Math.floor(movie.duration % 60)}m} • ${new Date(movie.startDate).getDate()} ${monthsArray[new Date(movie.startDate).getMonth()]} ${new Date(movie.startDate).getFullYear()}`} • {movie.language}
-                                        </p>
-                                        <p className="dark:text-gray-400 text-gray-800 mt-1">
-                                            {movie.description}
-                                        </p>
-                                        <div className="flex items-center bg-gray-800 text-white rounded-lg px-4 w-fit my-4 py-2">
-                                            <div className="flex items-center">
-                                                <span className="text-pink-500">⭐</span>
-                                                <span className="ml-2 font-semibold text-lg">{Math.round(movie.rating)}/10</span>
-                                                <span className="ml-2 text-gray-400">
-                                                    {movie.reviews.length === 1 ? `(${movie.reviews.length} vote)` : `(${movie.reviews.length} votes)`}
-                                                </span>
-                                            </div>
-                                            <button className="ml-4 bg-white text-black font-semibold px-4 py-1 rounded-lg" onClick={() => { setShowAddReview(true) }}>Rate now</button>
-                                        </div>
-                                        <div className='flex flex-col mr-5 mb-5 items-end'>
-                                    <a href={movie.trailer} className="flex items-center justify-center w-24 h-24 bg-gray-800 bg-opacity-50 rounded-full hover:bg-opacity-75 transition duration-300 ease-in-out cursor-pointer">
-                                        <motion.div whileHover={{ scale: 2 }} className="flex items-center justify-center w-12 h-12 bg-white bg-opacity-25 rounded-full">
-                                            <FontAwesomeIcon icon={faPlay}/>
-                                        </motion.div>
-                                    </a>
-                                    <div className="text-white text-sm font-medium mt-2">
-                                        Watch Trailer
-                                    </div>
-                                </div>
-                                    </div>
-                                </div>
-                            )
-                        )}
-                        <div>
-                            <img src={movie?.images[0]} alt='poster1' className='rounded-xl absolute top-0 h-full left-0 opacity-45 -z-10' />
+                        <div className='h-[20rem] overflow-auto'>
+                            {isLoading ? (
+                                <Skeleton count={5} height={120} />
+                            ) : filteredTheaters.length === 0 ? (
+                                <p className='text-black dark:text-white'>No theaters found for this movie in the selected location.</p>
+                            ) : (
+                                filteredTheaters.map((theater, index) => (
+                                    <SingleTheatre 
+                                        key={index} 
+                                        theatre={theater.theatre} 
+                                        showtimes={theater.showtimes} 
+                                        selectedDate={selectedDate}
+                                        onShowtimeClick={handleShowtimeClick}
+                                    />
+                                ))
+                            )}
                         </div>
                     </div>
+                </div>
+                <div className='w-full lg:w-1/4 mt-8 lg:mt-0'>
+                    {isLoading ? (
+                        <Skeleton height={400} />
+                    ) : (
+                        movie && (
+                            <div className="relative">
+                                <div ref={dataRef} className="bg-transparent dark:text-white text-black p-6 rounded-lg max-w-2xl relative mb-5">
+                                    <div className='flex gap-2 flex-wrap'>
+                                        {movie.genre.map((value, index) => (
+                                            <span key={index} className="bg-gray-800 text-white rounded-xl px-3 py-1 text-sm mb-2">{value}</span>
+                                        ))}
+                                    </div>
+                                    <h2 className="text-2xl font-bold my-4">{movie.title}</h2>
+                                    <p className="text-gray-400 mt-2">
+                                        {`${Math.floor(movie.duration / 60)}h ${Math.floor(movie.duration % 60)}m} • ${new Date(movie.startDate).getDate()} ${monthsArray[new Date(movie.startDate).getMonth()]} ${new Date(movie.startDate).getFullYear()}`} • {movie.language}
+                                    </p>
+                                    <p className="dark:text-gray-400 text-gray-800 mt-2">
+                                        {movie.description}
+                                    </p>
+                                    <div className="flex items-center bg-gray-800 text-white rounded-lg px-4 w-fit my-4 py-2">
+                                        <div className="flex items-center">
+                                            <span className="text-pink-500">⭐</span>
+                                            <span className="ml-2 font-semibold text-lg">{Math.round(movie.rating)}/10</span>
+                                            <span className="ml-2 text-gray-400">
+                                                {movie.reviews.length === 1 ? `(${movie.reviews.length} vote)` : `(${movie.reviews.length} votes)`}
+                                            </span>
+                                        </div>
+                                        <button className="ml-4 bg-white text-black font-semibold px-4 py-1 rounded-lg" onClick={() => { setShowAddReview(true) }}>Rate now</button>
+                                    </div>
+                                    <div className='flex flex-col items-center lg:items-end mt-4'>
+                                        <a href={movie.trailer} className="flex items-center justify-center w-24 h-24 bg-gray-800 bg-opacity-50 rounded-full hover:bg-opacity-75 transition duration-300 ease-in-out cursor-pointer">
+                                            <motion.div whileHover={{ scale: 1.5 }} className="flex items-center justify-center w-12 h-12 bg-white bg-opacity-25 rounded-full">
+                                                <FontAwesomeIcon icon={faPlay}/>
+                                            </motion.div>
+                                        </a>
+                                        <div className="text-white text-sm font-medium mt-2">
+                                            Watch Trailer
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="absolute top-0 left-0 w-full h-full -z-10">
+                                    <img src={movie?.images[0]} alt='poster1' className='rounded-xl w-full h-full object-cover opacity-45' />
+                                </div>
+                            </div>
+                        )
+                    )}
                 </div>
             </div>
+        </div>
         </>
     );
 }

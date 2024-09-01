@@ -80,9 +80,6 @@ const BookingList = () => {
                 <TableCell>{booking?.movie?.title}</TableCell>
                 <TableCell>{booking?.theatre?.name}</TableCell>
 
-                <TableCell>{booking?.movie.title}</TableCell>
-                <TableCell>{booking?.theatre.name}</TableCell>
-
                 <TableCell>{formatDate(booking?.showtime?.startDate)}</TableCell>
                 <TableCell>{booking?.showtime?.time}</TableCell>
 
@@ -115,3 +112,4 @@ const BookingList = () => {
 };
 
 export default BookingList;
+

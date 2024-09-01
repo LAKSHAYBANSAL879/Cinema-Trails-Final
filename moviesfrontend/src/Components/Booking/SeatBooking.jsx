@@ -273,170 +273,169 @@ console.log(showTimeDetails)
 return (
     <>
       <div className='relative w-full h-fit dark:text-white text-black mb-10'>
-        {showAddReview && (
-          <div className='absolute left-1/2 -top-10 z-30 w-full'>
-            <AddReview setShowAddReview={setShowAddReview} />
-          </div>
-        )}
-        <div className='-z-10 bg-opacity-10 bg-black dark:bg-opacity-100 w-full h-full fixed top-0'>
-          <img src={movieCollage} className='dark:opacity-5 opacity-5 dark:invert-0 invert' alt='' />
+      {showAddReview && (
+        <div className='absolute left-1/2 -top-10 z-30 w-full'>
+          <AddReview setShowAddReview={setShowAddReview} />
         </div>
-        <div className='flex w-full flex-row items-center h-fit justify-evenly'>
-          <div className='w-2/3 flex justify-start items-start'>
-            <div className='w-full'>
-              <div className='flex flex-col align-middle w-3/4 lg:ml-16 mt-8'>
-                <div>
-                  <Link to={`/movie/ShowListing/${movieId}`}>
-                    <FontAwesomeIcon icon={faArrowLeft} className='text-2xl' />
-                  </Link>
-                </div>
-                <div className='flex flex-row align-middle gap-16 items-center w-full justify-between'>
-                  {loading ? (
-                    <Skeleton width={200} height={30} />
-                  ) : (
-                    <h1 className='text-2xl font-semibold'>{movie?.title}</h1>
-                  )}
-                  {loading ? (
-                    <Skeleton width={150} height={30} />
-                  ) : (
-                    <TimeScroller theatreId={theatreId} movieId={movieId} />
-                  )}
-                </div>
-                <div>
-                  {loading ? (
-                    <Skeleton width={300} height={20} />
-                  ) : (
-                    <h1 className='text-xl font-semibold'>{theatre?.name}: {theatre?.city}, {theatre?.state}</h1>
-                  )}
-                </div>
-                <div className='mb-3 flex align-middle items-center mt-2'>
-                  <div className='flex gap-2'>
-                    {/* Add any additional skeletons if needed */}
-                  </div>
+      )}
+      <div className='-z-10 bg-opacity-10 bg-black dark:bg-opacity-100 w-full h-full fixed top-0'>
+        <img src={movieCollage} className='dark:opacity-5 opacity-5 dark:invert-0 invert w-full h-full object-cover' alt='' />
+      </div>
+      <div className='flex flex-col lg:flex-row w-full items-start lg:items-center h-fit justify-evenly'>
+        <div className='w-full lg:w-2/3 flex justify-start items-start'>
+          <div className='w-full'>
+            <div className='flex flex-col align-middle w-full lg:w-3/4 px-4 lg:ml-16 mt-8'>
+              <div>
+                <Link to={`/movie/ShowListing/${movieId}`}>
+                  <FontAwesomeIcon icon={faArrowLeft} className='text-2xl mb-4' />
+                </Link>
+              </div>
+              <div className='flex flex-col lg:flex-row align-middle gap-4 lg:gap-16 items-start lg:items-center w-full justify-between'>
+                {loading ? (
+                  <Skeleton width={200} height={30} />
+                ) : (
+                  <h1 className='text-2xl font-semibold'>{movie?.title}</h1>
+                )}
+                {loading ? (
+                  <Skeleton width={150} height={30} />
+                ) : (
+                  <TimeScroller  theatreId={theatreId} movieId={movieId} />
+                )}
+              </div>
+              <div>
+                {loading ? (
+                  <Skeleton width={300} height={20} />
+                ) : (
+                  <h1 className='text-xl font-semibold'>{theatre?.name}: {theatre?.city}, {theatre?.state}</h1>
+                )}
+              </div>
+              <div className='mb-3 flex align-middle items-center mt-2'>
+                <div className='flex gap-2'>
+                  {/* Add any additional skeletons if needed */}
                 </div>
               </div>
-              <div className='h-fit'>
-                <div className="max-w-4xl mx-auto px-6 py-2">
-                  {loading ? (
-                    <CustomSkeleton />
-                  ) : (
-                    Object.entries(sections).map(([section, sectionData], sectionIndex) => (
-                      <div key={sectionIndex} className='py-3'>
-                        <h2 className="text-lg font-semibold mb-2 text-left">{sectionData?.price || 0}</h2>
-                        {Object.entries(sectionData.rows).map(([key, seats], rowIndex) => (
-                          <div className="flex items-center" key={rowIndex}>
-                            <span className="text-gray-200 w-1/12">{(String(seats[0].id).split('')[0])}</span>
-                            <div className={`flex w-full items-center justify-center mb-2`}>
-                              <div className={`flex flex-wrap gap-2 gap-y-2`}>
-                                {seats.map((seat, seatIndex) => {
-                                  const seatId = seat.id;
-                                  const seatNumber = String(seat.id).slice(1,);
-                                  const isBooked = seat.status === 'booked';
-                                  const isSelected = selectedSeats.includes(seat);
+            </div>
+            <div className='h-fit'>
+              <div className="max-w-4xl mx-auto px-4 lg:px-6 py-2">
+                {loading ? (
+                  <CustomSkeleton />
+                ) : (
+                  Object.entries(sections).map(([section, sectionData], sectionIndex) => (
+                    <div key={sectionIndex} className='py-3'>
+                      <h2 className="text-lg font-semibold mb-2 text-left">{sectionData?.price || 0}</h2>
+                      {Object.entries(sectionData.rows).map(([key, seats], rowIndex) => (
+                        <div className="flex items-center" key={rowIndex}>
+                          <span className="text-gray-200 w-1/12">{(String(seats[0].id).split('')[0])}</span>
+                          <div className={`flex w-full items-center justify-center mb-2`}>
+                            <div className={`flex flex-wrap gap-2 gap-y-2`}>
+                              {seats.map((seat, seatIndex) => {
+                                const seatNumber = String(seat.id).slice(1,);
+                                const isBooked = seat.status === 'booked';
+                                const isSelected = selectedSeats.includes(seat);
 
-                                  return (
-                                    <button
-                                      key={seatIndex}
-                                      disabled={isBooked}
-                                      onClick={() => handleSeatClick(seat)}
-                                      className={`px-2 py-1 text-sm rounded ${isBooked
-                                        ? "bg-yellow-400 cursor-not-allowed"
-                                        : isSelected
-                                          ? "bg-blue-500"
-                                          : "bg-gray-400"
-                                        } text-white`}
-                                    >
-                                      {seatNumber}
-                                    </button>
-                                  );
-                                })}
-                              </div>
+                                return (
+                                  <button
+                                    key={seatIndex}
+                                    disabled={isBooked}
+                                    onClick={() => handleSeatClick(seat)}
+                                    className={`px-2 py-1 text-sm rounded ${isBooked
+                                      ? "bg-yellow-400 cursor-not-allowed"
+                                      : isSelected
+                                        ? "bg-blue-500"
+                                        : "bg-gray-400"
+                                      } text-white`}
+                                  >
+                                    {seatNumber}
+                                  </button>
+                                );
+                              })}
                             </div>
                           </div>
-                        ))}
-                      </div>
-                    ))
-                  )}
-                  {/* Color Scheme Bar */}
-                  <div className="mt-3 flex flex-col items-center justify-center ">
-                    <div className="w-full flex justify-center ">
-                      <div className="w-1/2 ml-20 h-10 dark:bg-gradient-to-r bg-white from-gray-200 via-gray-300 to-gray-200 rounded-b-full shadow-2xl text-center text-sm font-semibold text-gray-700 p-2">
-                        <span>Cinema Screen</span>
-                      </div>
+                        </div>
+                      ))}
                     </div>
-                    <div className='mt-6 flex items-center justify-center gap-10'>
-                      <div className="flex items-center space-x-2 ">
-                        <span className="inline-block w-4 h-4 bg-gray-400 rounded"></span>
-                        <span className="text-sm">Available</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <span className="inline-block w-4 h-4 bg-blue-500 rounded"></span>
-                        <span className="text-sm">Selected</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <span className="inline-block w-4 h-4 bg-yellow-400 rounded"></span>
-                        <span className="text-sm">Booked</span>
-                      </div>
+                  ))
+                )}
+                {/* Color Scheme Bar */}
+                <div className="mt-3 flex flex-col items-center justify-center">
+                  <div className="w-full flex justify-center">
+                    <div className="w-3/4 lg:w-1/2 h-10 dark:bg-gradient-to-r bg-white from-gray-200 via-gray-300 to-gray-200 rounded-b-full shadow-2xl text-center text-sm font-semibold text-gray-700 p-2">
+                      <span>Cinema Screen</span>
+                    </div>
+                  </div>
+                  <div className='mt-6 flex flex-wrap items-center justify-center gap-4 lg:gap-10'>
+                    <div className="flex items-center space-x-2">
+                      <span className="inline-block w-4 h-4 bg-gray-400 rounded"></span>
+                      <span className="text-sm">Available</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <span className="inline-block w-4 h-4 bg-blue-500 rounded"></span>
+                      <span className="text-sm">Selected</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <span className="inline-block w-4 h-4 bg-yellow-400 rounded"></span>
+                      <span className="text-sm">Booked</span>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div className='flex flex-col w-1/4 mr-16 gap-8 h-1/2'>
-            <div className="w-full p-6 bg-white rounded-lg shadow-lg text-black align-middle justify-self-start">
-              <h3 className="text-lg font-semibold mb-4">Summary</h3>
-              {loading ? (
-                <>
-                  <Skeleton width={150} height={20} />
-                  <Skeleton width={100} height={20} />
-                </>
-              ) : (
-                <>
-                  <p className="text-sm mb-2">Number of Tickets: <span className="font-medium">{selectedSeats.length}</span></p>
-                  <p className="text-sm mb-4">Total Price: <span className="font-medium">Rs {totalPrice}</span></p>
-                </>
-              )}
-              <div className="mb-4">
-                <CardElement
-                  options={{
-                    style: {
-                      base: {
-                        fontSize: '16px',
-                        color: '#424770',
-                        '::placeholder': {
-                          color: '#aab7c4',
-                        },
-                      },
-                      invalid: {
-                        color: '#9e2146',
+        </div>
+        <div className='flex flex-col w-full lg:w-1/4 px-4 lg:mr-16 gap-8 h-1/2 mt-8 lg:mt-0'>
+          <div className="w-full p-6 bg-white rounded-lg shadow-lg text-black align-middle justify-self-start">
+            <h3 className="text-lg font-semibold mb-4">Summary</h3>
+            {loading ? (
+              <>
+                <Skeleton width={150} height={20} />
+                <Skeleton width={100} height={20} />
+              </>
+            ) : (
+              <>
+                <p className="text-sm mb-2">Number of Tickets: <span className="font-medium">{selectedSeats.length}</span></p>
+                <p className="text-sm mb-4">Total Price: <span className="font-medium">Rs {totalPrice}</span></p>
+              </>
+            )}
+            <div className="mb-4">
+              <CardElement
+                options={{
+                  style: {
+                    base: {
+                      fontSize: '16px',
+                      color: '#424770',
+                      '::placeholder': {
+                        color: '#aab7c4',
                       },
                     },
-                  }}
-                />
-              </div>
+                    invalid: {
+                      color: '#9e2146',
+                    },
+                  },
+                }}
+              />
+            </div>
 
-              <button
-                className={`w-full py-2 mt-4 text-sm font-semibold text-white rounded-lg transition-all ${selectedSeats.length === 0
-                  ? "bg-gray-400 cursor-not-allowed"
-                  : "bg-blue-600 hover:bg-blue-700"
-                }`}
-                disabled={selectedSeats.length === 0}
-                onClick={handleBooking}
-              >
-                Book
-              </button>
-            </div>
-            <div>
-              {loading ? (
-                <Skeleton height={200} />
-              ) : (
-                <img src={movie?.images[0]} alt="" className='w-full h-full rounded-lg' />
-              )}
-            </div>
+            <button
+              className={`w-full py-2 mt-4 text-sm font-semibold text-white rounded-lg transition-all ${selectedSeats.length === 0
+                ? "bg-gray-400 cursor-not-allowed"
+                : "bg-blue-600 hover:bg-blue-700"
+              }`}
+              disabled={selectedSeats.length === 0}
+              onClick={handleBooking}
+            >
+              Book
+            </button>
+          </div>
+          <div>
+            {loading ? (
+              <Skeleton height={200} />
+            ) : (
+              <img src={movie?.images[0]} alt="" className='w-full h-auto rounded-lg' />
+            )}
           </div>
         </div>
       </div>
+    </div>
     </>
   );
 }
