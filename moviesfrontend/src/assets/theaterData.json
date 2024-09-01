@@ -1,0 +1,62 @@
+[
+    {
+        "name": "Cineplex Grand",
+        "state": "Haryana",
+        "seats": 250,
+        "city": "Faridabad",
+        "country": "India",
+        "images": [
+            "https://static.standard.co.uk/s3fs-public/thumbnails/image/2019/01/10/15/royal-opera-house-auditorium.-c-roh-photographed-by-sim-canetty-clarke-2.jpg",
+            "https://1c4f36525c9f9f4a4294-3f503be9d77245cdc4b7e69c69eff679.ssl.cf2.rackcdn.com/palace_theater_backgrounds_aboutus.jpg"
+        ],
+        "movies": ["66bf3715bd556612b25558a8", "66bf3715bd556612b25558aa"]
+    },
+    {
+        "name": "Majestic Cinema",
+        "state": "Haryana",
+        "seats": 320,
+        "city": "Faridabad",
+        "country": "India",
+        "images": [
+            "majestic_cinema_1.jpg",
+            "majestic_cinema_2.jpg"
+        ],
+        "movies": ["66bf3715bd556612b25558a8", "66bf3715bd556612b25558aa"]
+    },
+    {
+        "name": "Royal Theatre",
+        "state": "Haryana",
+        "seats": 180,
+        "city": "Faridabad",
+        "country": "India",
+        "images": [
+            "https://cdn.squaremile.com/gallery/59db57e207cc1.jpeg",
+            "https://wallpaperaccess.com/full/2612923.jpg"
+        ],
+        "movies": ["66bf3715bd556612b25558a8", "66bf3715bd556612b25558aa"]
+    },
+    {
+        "name": "Galaxy Cinemas",
+        "state": "Haryana",
+        "seats": 220,
+        "city": "Faridabad",
+        "country": "India",
+        "images": [
+            "https://c.pxhere.com/photos/a5/8e/architecture_balconies_lights_seats_theater_theatre-1056121.jpg!d",
+            "https://www.historictheatrephotos.com/Resources/Theatre-Photos/Warner-Washington-DC/Photos/Auditorium_-_Balcony/Auditorium_Ceiling_from_Balcony.jpg"
+        ],
+        "movies": ["66bf3715bd556612b25558a8", "66bf3715bd556612b25558aa"]
+    },
+    {
+        "name": "Sunset Plaza Cinema",
+        "state": "Haryana",
+        "seats": 150,
+        "city": "Faridabad",
+        "country": "India",
+        "images": [
+            "https://media.blogto.com/articles/20171112-live-theatre-toronto.jpg?w=2048&cmd=resize_then_crop&height=1365&quality=70",
+            "http://2.bp.blogspot.com/-_0W2ozuh-3M/UzLiT96t0gI/AAAAAAAAA6c/j6sp2PDh-_Y/s1600/SDOR--Apollo-001.jpg"
+        ],
+        "movies": ["66bf3715bd556612b25558a8", "66bf3715bd556612b25558aa"]
+    }
+]

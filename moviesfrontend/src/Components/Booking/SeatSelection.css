@@ -1,0 +1,76 @@
+.seat-map {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between tiers */
+  }
+  
+  .tier-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .tier-group .seats {
+    display: flex;
+    flex-wrap: wrap; /* Allows seats to wrap onto multiple lines if needed */
+    gap: 10px; /* Space between seats */
+  }
+  
+  .seat {
+    width: 30px; /* Adjust as needed */
+    height: 30px; /* Adjust as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .seat-available {
+    background-color: #fff;
+  }
+  
+  .seat-selected {
+    background-color: #4CAF50; /* Green */
+    color: white;
+  }
+  
+  .seat-occupied {
+    background-color: #f44336; /* Red */
+    color: white;
+  }
+  
+  .seat-booked {
+    background-color: #9e9e9e; /* Grey */
+    color: white;
+  }
+  
+  .tier-info {
+    margin-bottom: 10px;
+  }
+  
+  .booking-summary {
+    width: 25vw;
+    background:#ffff;
+    
+  }
+  
+  .book-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: #4CAF50; /* Green */
+    cursor: pointer;
+  }
+  
+  .book-button-disabled {
+    background-color: #9e9e9e; /* Grey */
+    cursor: not-allowed;
+  }
+  
+  .book-button-active {
+    background-color: #4CAF50; /* Green */
+  }
+  

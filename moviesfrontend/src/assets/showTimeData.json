@@ -1,0 +1,432 @@
+[
+    {
+      "startDate": "2024-09-01T10:00:00Z",
+      "endDate": "2024-09-18T12:30:00Z",
+      "movie": "66bf3715bd556612b25558a8",
+      "theatre": "66c375785ec2ab4bed25eb32",
+      "ticketPrices": {
+        "executive": 400,
+        "gold": 300,
+        "silver": 200
+      },
+      "time": "10:00",
+      "seats": []
+    },
+    {
+      "startDate": "2024-09-01T14:00:00Z",
+      "endDate": "2024-09-18T16:30:00Z",
+      "movie": "66bf3715bd556612b25558aa",
+      "theatre": "66c375785ec2ab4bed25eb32",
+      "ticketPrices": {
+        "executive": 400,
+        "gold": 300,
+        "silver": 200
+      },
+      "time": "14:00",
+      "seats": []
+    },
+    {
+      "startDate": "2024-09-01T18:00:00Z",
+      "endDate": "2024-09-18T20:30:00Z",
+      "movie": "66bf3715bd556612b25558a8",
+      "theatre": "66c375785ec2ab4bed25eb32",
+      "ticketPrices": {
+        "executive": 450,
+        "gold": 350,
+        "silver": 250
+      },
+      "time": "18:00",
+      "seats": []
+    },
+    {
+      "startDate": "2024-09-01T22:00:00Z",
+      "endDate": "2024-09-19T00:30:00Z",
+      "movie": "66bf3715bd556612b25558aa",
+      "theatre": "66c375785ec2ab4bed25eb32",
+      "ticketPrices": {
+        "executive": 450,
+        "gold": 350,
+        "silver": 250
+      },
+      "time": "22:00",
+      "seats": []
+    },
+    {
+      "startDate": "2024-09-01T10:00:00Z",
+      "endDate": "2024-09-19T12:30:00Z",
+      "movie": "66bf3715bd556612b25558a8",
+      "theatre": "66c375785ec2ab4bed25eb32",
+      "ticketPrices": {
+        "executive": 400,
+        "gold": 300,
+        "silver": 200
+      },
+      "time": "10:00",
+      "seats": []
+    },
+    {
+      "startDate": "2024-09-01T14:00:00Z",
+      "endDate": "2024-09-19T16:30:00Z",
+      "movie": "66bf3715bd556612b25558aa",
+      "theatre": "66c375785ec2ab4bed25eb32",
+      "ticketPrices": {
+        "executive": 400,
+        "gold": 300,
+        "silver": 200
+      },
+      "time": "14:00",
+      "seats": []
+    },
+    {
+      "startDate": "2024-09-02T18:00:00Z",
+      "endDate": "2024-09-19T20:30:00Z",
+      "movie": "66bf3715bd556612b25558a8",
+      "theatre": "66c375785ec2ab4bed25eb32",
+      "ticketPrices": {
+        "executive": 450,
+        "gold": 350,
+        "silver": 250
+      },
+      "time": "18:00",
+      "seats": []
+    },
+    {
+      "startDate": "2024-09-02T22:00:00Z",
+      "endDate": "2024-09-20T00:30:00Z",
+      "movie": "66bf3715bd556612b25558aa",
+      "theatre": "66c375785ec2ab4bed25eb32",
+      "ticketPrices": {
+        "executive": 450,
+        "gold": 350,
+        "silver": 250
+      },
+      "time": "22:00 ",
+      "seats": []
+    },
+    {
+      "startDate": "2024-09-03T10:00:00Z",
+      "endDate": "2024-09-20T12:30:00Z",
+      "movie": "66bf3715bd556612b25558a8",
+      "theatre": "66c375785ec2ab4bed25eb32",
+      "ticketPrices": {
+        "executive": 400,
+        "gold": 300,
+        "silver": 200
+      },
+      "time": "10:00",
+      "seats": []
+    },
+    {
+      "startDate": "2024-09-03T14:00:00Z",
+      "endDate": "2024-09-20T16:30:00Z",
+      "movie": "66bf3715bd556612b25558aa",
+      "theatre": "66c375785ec2ab4bed25eb32",
+      "ticketPrices": {
+        "executive": 400,
+        "gold": 300,
+        "silver": 200
+      },
+      "time": "14:00",
+      "seats": []
+    },
+    {
+      "startDate": "2024-09-03T10:00:00Z",
+      "endDate": "2024-09-18T12:30:00Z",
+      "movie": "66bf3715bd556612b25558a8",
+      "theatre": "66c375785ec2ab4bed25eb33",
+      "ticketPrices": {
+        "executive": 420,
+        "gold": 320,
+        "silver": 220
+      },
+      "time": "10:00 ",
+      "seats": []
+    },
+    {
+      "startDate": "2024-09-03T14:00:00Z",
+      "endDate": "2024-09-18T16:30:00Z",
+      "movie": "66bf3715bd556612b25558aa",
+      "theatre": "66c375785ec2ab4bed25eb33",
+      "ticketPrices": {
+        "executive": 420,
+        "gold": 320,
+        "silver": 220
+      },
+      "time": "14:00",
+      "seats": []
+    },
+    {
+      "startDate": "2024-09-03T18:00:00Z",
+      "endDate": "2024-09-18T20:30:00Z",
+      "movie": "66bf3715bd556612b25558a8",
+      "theatre": "66c375785ec2ab4bed25eb33",
+      "ticketPrices": {
+        "executive": 470,
+        "gold": 370,
+        "silver": 270
+      },
+      "time": "18:00",
+      "seats": []
+    },
+    {
+      "startDate": "2024-09-03T22:00:00Z",
+      "endDate": "2024-09-19T00:30:00Z",
+      "movie": "66bf3715bd556612b25558aa",
+      "theatre": "66c375785ec2ab4bed25eb33",
+      "ticketPrices": {
+        "executive": 470,
+        "gold": 370,
+        "silver": 270
+      },
+      "time": "22:00",
+      "seats": []
+    },
+    {
+      "startDate": "2024-09-04T10:00:00Z",
+      "endDate": "2024-09-19T12:30:00Z",
+      "movie": "66bf3715bd556612b25558a8",
+      "theatre": "66c375785ec2ab4bed25eb33",
+      "ticketPrices": {
+        "executive": 420,
+        "gold": 320,
+        "silver": 220
+      },
+      "time": "10:00",
+      "seats": []
+    },
+    {
+      "startDate": "2024-09-04T14:00:00Z",
+      "endDate": "2024-09-19T16:30:00Z",
+      "movie": "66bf3715bd556612b25558aa",
+      "theatre": "66c375785ec2ab4bed25eb33",
+      "ticketPrices": {
+        "executive": 420,
+        "gold": 320,
+        "silver": 220
+      },
+      "time": "14:00 ",
+      "seats": []
+    },
+    {
+      "startDate": "2024-09-04T18:00:00Z",
+      "endDate": "2024-09-19T20:30:00Z",
+      "movie": "66bf3715bd556612b25558a8",
+      "theatre": "66c375785ec2ab4bed25eb33",
+      "ticketPrices": {
+        "executive": 470,
+        "gold": 370,
+        "silver": 270
+      },
+      "time": "18:00",
+      "seats": []
+    },
+    {
+      "startDate": "2024-09-04T22:00:00Z",
+      "endDate": "2024-09-20T00:30:00Z",
+      "movie": "66bf3715bd556612b25558aa",
+      "theatre": "66c375785ec2ab4bed25eb33",
+      "ticketPrices": {
+        "executive": 470,
+        "gold": 370,
+        "silver": 270
+      },
+      "time": "22:00",
+      "seats": []
+    },
+    {
+      "startDate": "2024-09-04T10:00:00Z",
+      "endDate": "2024-09-20T12:30:00Z",
+      "movie": "66bf3715bd556612b25558a8",
+      "theatre": "66c375785ec2ab4bed25eb33",
+      "ticketPrices": {
+        "executive": 420,
+        "gold": 320,
+        "silver": 220
+      },
+      "time": "10:00 ",
+      "seats": []
+    },
+    {
+      "startDate": "2024-09-04T14:00:00Z",
+      "endDate": "2024-09-20T16:30:00Z",
+      "movie": "66bf3715bd556612b25558aa",
+      "theatre": "66c375785ec2ab4bed25eb33",
+      "ticketPrices": {
+        "executive": 420,
+        "gold": 320,
+        "silver": 220
+      },
+      "time": "14:00 ",
+      "seats": []
+    },
+    {
+      "startDate": "2024-09-03T10:00:00Z",
+      "endDate": "2024-09-18T12:30:00Z",
+      "movie": "66bf3715bd556612b25558a8",
+      "theatre": "66c375785ec2ab4bed25eb34",
+      "ticketPrices": {
+        "executive": 410,
+        "gold": 310,
+        "silver": 210
+      },
+      "time": "10:00 ",
+      "seats": []
+    },
+    {
+      "startDate": "2024-09-03T14:00:00Z",
+      "endDate": "2024-09-18T16:30:00Z",
+      "movie": "66bf3715bd556612b25558aa",
+      "theatre": "66c375785ec2ab4bed25eb34",
+      "ticketPrices": {
+        "executive": 410,
+        "gold": 310,
+        "silver": 210
+      },
+      "time": "14:00 ",
+      "seats": []
+    },
+    {
+      "startDate": "2024-09-03T18:00:00Z",
+      "endDate": "2024-09-18T20:30:00Z",
+      "movie": "66bf3715bd556612b25558a8",
+      "theatre": "66c375785ec2ab4bed25eb34",
+      "ticketPrices": {
+        "executive": 460,
+        "gold": 360,
+        "silver": 260
+      },
+      "time": "18:00",
+      "seats": []
+    },
+    {
+      "startDate": "2024-09-18T22:00:00Z",
+      "endDate": "2024-09-19T00:30:00Z",
+      "movie": "66bf3715bd556612b25558aa",
+      "theatre": "66c375785ec2ab4bed25eb34",
+      "ticketPrices": {
+        "executive": 460,
+        "gold": 360,
+        "silver": 260
+      },
+      "time": "22:00 ",
+      "seats": []
+    },
+    {
+      "startDate": "2024-09-05T10:00:00Z",
+      "endDate": "2024-09-19T12:30:00Z",
+      "movie": "66bf3715bd556612b25558a8",
+      "theatre": "66c375785ec2ab4bed25eb34",
+      "ticketPrices": {
+        "executive": 410,
+        "gold": 310,
+        "silver": 210
+      },
+      "time": "10:00 ",
+      "seats": []
+    },
+    {
+      "startDate": "2024-09-05T14:00:00Z",
+      "endDate": "2024-09-19T16:30:00Z",
+      "movie": "66bf3715bd556612b25558aa",
+      "theatre": "66c375785ec2ab4bed25eb34",
+      "ticketPrices": {
+        "executive": 410,
+        "gold": 310,
+        "silver": 210
+      },
+      "time": "14:00 ",
+      "seats": []
+    },
+    {
+      "startDate": "2024-09-06T18:00:00Z",
+      "endDate": "2024-09-19T20:30:00Z",
+      "movie": "66bf3715bd556612b25558a8",
+      "theatre": "66c375785ec2ab4bed25eb34",
+      "ticketPrices": {
+        "executive": 460,
+        "gold": 360,
+        "silver": 260
+      },
+      "time": "18:00",
+      "seats": []
+    },
+    {
+      "startDate": "2024-09-T522:00:00Z",
+      "endDate": "2024-09-20T00:30:00Z",
+      "movie": "66bf3715bd556612b25558aa",
+      "theatre": "66c375785ec2ab4bed25eb34",
+      "ticketPrices": {
+        "executive": 460,
+        "gold": 360,
+        "silver": 260
+      },
+      "time": "22:00 ",
+      "seats": []
+    },
+    {
+      "startDate": "2024-09-20T10:00:00Z",
+      "endDate": "2024-09-20T12:30:00Z",
+      "movie": "66bf3715bd556612b25558a8",
+      "theatre": "66c375785ec2ab4bed25eb34",
+      "ticketPrices": {
+        "executive": 410,
+        "gold": 310,
+        "silver": 210
+      },
+      "time": "10:00 ",
+      "seats": []
+    },
+    {
+      "startDate": "2024-09-20T14:00:00Z",
+      "endDate": "2024-09-20T16:30:00Z",
+      "movie": "66bf3715bd556612b25558aa",
+      "theatre": "66c375785ec2ab4bed25eb34",
+      "ticketPrices": {
+        "executive": 410,
+        "gold": 310,
+        "silver": 210
+      },
+      "time": "2:00 ",
+      "seats": []
+    },
+    {
+      "startDate": "2024-09-03T10:00:00Z",
+      "endDate": "2024-09-18T12:30:00Z",
+      "movie": "66bf3715bd556612b25558a8",
+      "theatre": "66c375785ec2ab4bed25eb35",
+      "ticketPrices": {
+        "executive": 430,
+        "gold": 330,
+        "silver": 230
+      },
+      "time": "10:00 ",
+      "seats": []
+    },
+    {
+      "startDate": "2024-09-03T14:00:00Z",
+      "endDate": "2024-09-18T16:30:00Z",
+      "movie": "66bf3715bd556612b25558aa",
+      "theatre": "66c375785ec2ab4bed25eb35",
+      "ticketPrices": {
+        "executive": 430,
+        "gold": 330,
+        "silver": 230
+      },
+      "time": "14:00 ",
+      "seats": []
+    },
+    {
+      "startDate": "2024-09-03T18:00:00Z",
+      "endDate": "2024-09-18T20:30:00Z",
+      "movie": "66bf3715bd556612b25558a8",
+      "theatre": "66c375785ec2ab4bed25eb35",
+      "ticketPrices": {
+        "executive": 480,
+        "gold": 380,
+        "silver": 280
+      },
+      "time": "18:00",
+      "seats": []
+    }
+]
+  

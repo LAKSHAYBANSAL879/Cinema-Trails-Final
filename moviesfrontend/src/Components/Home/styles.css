@@ -1,0 +1,218 @@
+/* Button styles */
+#buttons a,
+.StyledButton {
+  position: relative;
+  background: #fff;
+  color: #fff;
+  margin-left: 10px;
+  font-size: 0.7em;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 400;
+  padding: 9px 15px;
+  transition: 0.5s;
+  gap: 1vw;
+  text-decoration: none;
+  top: 20px;
+  border-radius: 4px;
+}
+
+#buttons a:hover,
+.StyledButton:hover {
+  background: var(--clr);
+  color: #fff;
+  letter-spacing: 0.25em;
+}
+
+#buttons a:before,
+.StyledButton:before {
+  content: '';
+  position: absolute;
+  inset: 2px;
+  background: #27282c;
+}
+
+#buttons a span,
+.StyledButton span {
+  position: relative;
+  z-index: 1;
+}
+
+#buttons a i,
+.StyledButton i {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+
+#buttons a i::before,
+#buttons a i::after,
+.StyledButton i::before,
+.StyledButton i::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 4px;
+  background: #27282c;
+  transform: translate(-50%) skewX(325deg);
+  transition: 0.5s;
+}
+
+#buttons a i::before,
+.StyledButton i::before {
+  top: 0;
+  left: 80%;
+}
+
+#buttons a:hover i::before,
+.StyledButton:hover i::before {
+  width: 20px;
+  left: 20%;
+}
+
+#buttons a i::after,
+.StyledButton i::after {
+  bottom: 0;
+  left: 20%;
+}
+
+#buttons a:hover i::after,
+.StyledButton:hover i::after {
+  width: 20px;
+  left: 80%;
+}
+
+/* Movie poster styles */
+.movie-slide {
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.content-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0) 100%);
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+}
+
+.genre-tag {
+  background-color: rgba(255,255,255,0.2);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+
+/* Navigation button styles */
+.nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  padding: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  font-size: 24px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+
+.nav-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.nav-button.prev {
+  left: 10px;
+}
+
+.nav-button.next {
+  right: 10px;
+}
+
+/* Navbar styles */
+.StyledAppBar {
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+  box-shadow: none;
+  transition: background-color 0.3s ease;
+  height: 80px;
+}
+
+.StyledAppBar:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Search styles */
+.Search {
+  position: relative;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.15);
+  margin-right: 16px;
+  margin-left: 0;
+  width: 100%;
+}
+
+.Search:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+@media (min-width: 600px) {
+  .Search {
+    margin-left: 24px;
+    width: auto;
+  }
+}
+
+.SearchIconWrapper {
+  padding: 0 16px;
+  height: 100%;
+  position: absolute;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.StyledInputBase {
+  color: inherit;
+}
+
+.StyledInputBase input {
+  padding: 8px 8px 8px 0;
+  padding-left: calc(1em + 32px);
+  transition: width 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  width: 100%;
+}
+
+@media (min-width: 960px) {
+  .StyledInputBase input {
+    width: 20ch;
+  }
+}
+
+/* Logo typography */
+.LogoTypography {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 600px) {
+  .LogoTypography {
+    font-size: 1.2rem;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .content-wrapper {
+    padding: 1rem;
+  }
+}
