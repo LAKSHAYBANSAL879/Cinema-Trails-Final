@@ -21,9 +21,7 @@ Cinema Trails is a comprehensive online platform designed to streamline the movi
 - **Reservation Management:** 
   - Oversee customer reservations.
   - Modify, confirm, or cancel bookings.
-- **User Management:** 
-  - Create, update, or remove user accounts.
-  - Maintain a secure and organized user database.
+
     
 **To acess admin you can login from email lakshay@mail.com and password as 123456789**
 ### **Customer Features**
@@ -58,8 +56,15 @@ Cinema Trails is a comprehensive online platform designed to streamline the movi
 You can access the live version of Cinema Trails here: [Cinema Trails WebApp](https://66d07229ad88231001de7ac5--rococo-cactus-242acd.netlify.app/)  
 
 
-## **Contact Us**
-For any questions, feedback, or support, please feel free to reach out to us through the following channels:
-- **Email:** [Your Email Here]
-- **LinkedIn:** [Your LinkedIn Profile Here]
+
+## Contact Us
+
+For any questions, feedback, or support, please feel free to reach out to us through the following LinkedIn profiles of our team members:
+
+- **[Ashish K. Choudhary](https://www.linkedin.com/in/ashizh-choudhary/)**
+- **[Dhruv Jindal](https://www.linkedin.com/in/dhruv-jindal546/)**
+- **[Lakshay Bansal](https://www.linkedin.com/in/samarpit-agarwal/)**
+- **[Samarpit Agarwal](https://www.linkedin.com/in/samarpit-agarwal/)**
+
+We look forward to connecting with you!
 
