@@ -53,7 +53,7 @@ Cinema Trails is a comprehensive online platform designed to streamline the movi
 - **Payment Gateway:** Stripe (Test card: 4000 0035 6000 0008)
 
 ## **Hosted Application**
-You can access the live version of Cinema Trails here: [Cinema Trails WebApp](https://66d07229ad88231001de7ac5--rococo-cactus-242acd.netlify.app/)  
+You can access the live version of Cinema Trails here: [Cinema Trails WebApp](https://66d47f1f01eac80e664f81c9--tranquil-scone-ed2fb4.netlify.app/)  
 
 
 
